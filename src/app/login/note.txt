@@ -1,0 +1,86 @@
+  data binding in angular 
+..........................
+
+   . html to ts file sharing 
+   . ts to html file sharing 
+
+    :ts == component
+    :html == view
+    methods
+   ........
+    1: one way binding
+    ..................
+       one way aayrikum, html to ts allenghi ts to html 
+
+    1.1 component to view (ts to html)
+     1.string interpollation
+     symbol="{{}}"
+
+     1.2.property binding
+     symbol=" [property]="vaue" "
+
+    2: view to component (html to ts)
+
+    1.1.event binding method 
+     symbol=(event)="method name()"
+
+    1.2 event binding using $event(dollar event)
+     symbol="(eventname)="methodname($event)" "
+
+    1.3 event using template rentering variable
+      symbol="#variable"
+    
+    2: two way binding 
+      ................
+
+   2.1 ngmodel  
+   "FormsModule" ne ullilu varunna methodanu ngmodel
+   symbol=" [(ngmodel)]="value" "
+
+
+   Redirection in angular
+   ......................
+
+   "navigateByUrl" :method used in redirection 
+   class = Router varunnath "AppRoutingModule"
+ 
+    Dependency injection
+    ....................
+    oru class nte ullilu olla method ne vere classnte ullilu use cheyan vendi
+    "to use the method of class in another class"
+
+  - cheyunath in "constructor"
+
+steps:-
+  1. access specfier : private/public =private
+  2. variable 
+  3. class name
+      eg:(private variable:Classname)
+
+      Angular Servies
+    ..................
+
+    create cheyan olla command - "ng g s data"
+
+
+    Angular Directives
+  .....................
+
+  1. structural directives
+
+  * to handle structured datas in view(html file) of a component 
+
+  - ngFor - directive used , can directly apply in html to access elements
+            in view of a component.
+
+            Form Validation in Angular
+          ..............................
+
+      We can create forms in two way:
+
+      1. Template Driven Form
+
+        
+
+      2. Model Driven Form
+
