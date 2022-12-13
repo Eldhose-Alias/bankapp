@@ -73,6 +73,8 @@ steps:-
   - ngFor - directive used , can directly apply in html to access elements
             in view of a component.
 
+  - ngIf - html nte ullilu enthelum condition check cheyan
+
             Form Validation in Angular
           ..............................
 
@@ -80,7 +82,42 @@ steps:-
 
       1. Template Driven Form
 
-        
-
       2. Model Driven Form
 
+       2.1 method used : Reactive Form
+                      ....................
+
+        "ReactiveFormModule" : module used to create model forms
+
+             class = "FormBuilder" - class of ReactiveFormModule          
+
+          3 things that must inside form class
+
+            group , array , control 
+
+      Validate Model Form
+    ......................
+
+    Validatoar - a class in angular it include methods for apply Validation
+
+    -access error in Validator form-
+
+    " this.registerForm.get('uname')?.errors "
+
+                      error
+                       |
+              * valid - empty response 
+    
+              * invalid - content displayed
+
+              eg:-
+
+     *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('uname)?.touched"
+    
+
+    Local Stroage in Angular
+  ...........................
+
+- store - localStroage.setItem()
+- access - localStroage.getItem()
+- delete - localStroage.removeItem()

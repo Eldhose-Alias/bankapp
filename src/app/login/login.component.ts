@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from '../services/data.service';
 
@@ -10,8 +11,8 @@ import { DataService } from '../services/data.service';
 export class LoginComponent {
   aim="Your Perfect Banking partner"
   data="Account number"
-  acno=''
-  password=''
+  // acno=''
+  // password=''
   userDetails:any={
     1000:{acnumber:1000,username:"anna",password:123,balance:0},
     1001:{acnumber:1001,username:"anu",password:1234,balance:0},
@@ -19,15 +20,20 @@ export class LoginComponent {
     1003:{acnumber:1003,username:"arun",password:1236,balance:0}
   }
 
-  constructor(private router:Router ,private ds:DataService){
+  constructor(private router:Router ,private ds:DataService ,private fb:FormBuilder){
   
   }
 
+  loginForm=this.fb.group({acno:['',[Validators.required ,Validators.pattern('[0-9]+')]],
+                          password:['',[Validators.required ,Validators.pattern('[a-zA-Z0-9]+')]]
+                        })
+
   login(){
-   var acno=this.acno
-   var psw=this.password
-   
-   const result=this.ds.login(acno,psw)
+   var acno=this.loginForm.value.acno
+   var psw=this.loginForm.value.password
+   if(this.loginForm.valid){
+
+    const result=this.ds.login(acno,psw)
     if(result){
       alert('Login Success')
       this.router.navigateByUrl('dashborad')
@@ -38,4 +44,7 @@ export class LoginComponent {
     }
  
 }
+
+   }
+   
 }
