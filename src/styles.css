@@ -3,3 +3,7 @@ body{
     background-image:url(./assets/green-leaves-waterdrops-4k-wallpaper.jpg);
     background-size: cover;
 }
+
+.style{
+    opacity: 0;
+}

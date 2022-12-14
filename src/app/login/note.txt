@@ -63,10 +63,10 @@ steps:-
     create cheyan olla command - "ng g s data"
 
 
-    Angular Directives
+    Angular Directives  - DOM nte ullilu enthelum changes varuthan vendi anu angular directives use cheyune
   .....................
 
-  1. structural directives
+  1. Structural directives - DOM nte structure ne change cheyan vendi
 
   * to handle structured datas in view(html file) of a component 
 
@@ -74,6 +74,10 @@ steps:-
             in view of a component.
 
   - ngIf - html nte ullilu enthelum condition check cheyan
+
+  2.Component directive - DOM nte components ne link cheyan vendi 
+
+  3.Attribute directive - 
 
             Form Validation in Angular
           ..............................
@@ -121,3 +125,16 @@ steps:-
 - store - localStroage.setItem()
 - access - localStroage.getItem()
 - delete - localStroage.removeItem()
+
+
+    Parent Child Components communication in Angular
+   ...................................................
+
+  - 
+
+  Date && Time in Angular
+..........................
+
+Date nn parayane oru class 
+
+create an object of class Date to access Date and Time
